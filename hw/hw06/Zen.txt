@@ -8,7 +8,7 @@ The Zen of Python, by Tim Peters
 4	Mykhailo Kovalenko
 5	Olha Polonska
 6	Riznichenko Anastasiia
-7	Troian Volodymyr
+7.Readability counts.
 8	Vadym Bobryshev
 9	Vasyl Rusanov
 10	Дмитро Сімко

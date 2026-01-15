@@ -19,10 +19,14 @@
 
 # methods = [method for method in dir(tuple) if not method.startswith("__")]
 # print(methods)
+
 n = 20
 k = 1_000_000
+N = 30
 for i in range(1, 5):
     
     l = list(range(n**i))
     t = tuple(range(n**i))
+
     print(f"n={n**i}: list size={l.__sizeof__()} bytes, tuple size={t.__sizeof__()} bytes")
+m = 200_000

@@ -1,0 +1,32 @@
+The Zen of Python, by Tim Peters
+
+
+	
+1	Liubomyr Halamaha
+2	Arthur Andronaki
+3	Dmytro Shymanskyi
+4	Mykhailo Kovalenko
+5	Olha Polonska
+6	Riznichenko Anastasiia
+7	Troian Volodymyr
+8	Vadym Bobryshev
+9	Vasyl Rusanov
+10	Дмитро Сімко
+11	Мария
+12	Олег Книш
+13	Andrii Zhadan
+14	Anton Konovalov
+15	Artur Ivanov
+16	Artur Omelian
+17	Danil Pronarovich
+18	Lytvynenko Artem
+19	Mariia Anokhina
+20	Nataliia Maslii
+21	Pavlo Lutsyk
+22	Shmyhol Evhenii
+23	Taras Rykhlinskyi
+24	Tsoi Maksym
+25	Vadym Polyniak
+26	Дмитро Телюков
+27	Наталія Кулик
+28	Орест Ковальчук

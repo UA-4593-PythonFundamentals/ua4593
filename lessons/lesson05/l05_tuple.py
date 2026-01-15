@@ -19,7 +19,8 @@
 
 # methods = [method for method in dir(tuple) if not method.startswith("__")]
 # print(methods)
-n = 10
+n = 20
+k = 1_000_000
 for i in range(1, 5):
     
     l = list(range(n**i))

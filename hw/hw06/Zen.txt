@@ -4,7 +4,7 @@ The Zen of Python, by Tim Peters
 	
 1.Beautiful is better than ugly.
 2	Arthur Andronaki
-3	Dmytro Shymanskyi
+3.Simple is better than complex.
 4	Mykhailo Kovalenko
 5	Olha Polonska
 6	Riznichenko Anastasiia

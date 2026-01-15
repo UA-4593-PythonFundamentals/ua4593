@@ -2,7 +2,7 @@ The Zen of Python, by Tim Peters
 
 
 	
-1	Liubomyr Halamaha
+1.Beautiful is better than ugly.
 2	Arthur Andronaki
 3	Dmytro Shymanskyi
 4	Mykhailo Kovalenko

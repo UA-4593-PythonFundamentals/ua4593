@@ -11,7 +11,7 @@ The Zen of Python, by Tim Peters
 7.Readability counts.
 8	Vadym Bobryshev
 9	Vasyl Rusanov
-10	Дмитро Сімко
+10	Errors should never pass silently.
 11	Мария
 12	Олег Книш
 13	Andrii Zhadan

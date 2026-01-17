@@ -29,4 +29,4 @@ The Zen of Python, by Tim Peters
 25	Vadym Polyniak
 26	Дмитро Телюков
 27	Наталія Кулик
-28	Орест Ковальчук
+28.Although practicality beats purity.

@@ -13,7 +13,7 @@ The Zen of Python, by Tim Peters
 9	Vasyl Rusanov
 10	Errors should never pass silently.
 11	Мария
-12	Олег Книш
+12.In the face of ambiguity, refuse the temptation to guess.
 13	Andrii Zhadan
 14	Anton Konovalov
 15	Artur Ivanov

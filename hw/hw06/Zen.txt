@@ -27,6 +27,6 @@ The Zen of Python, by Tim Peters
 23	Taras Rykhlinskyi
 24	Tsoi Maksym
 25	Vadym Polyniak
-26	Дмитро Телюков
+26	Readability counts.
 27	Наталія Кулик
 28.Although practicality beats purity.

@@ -22,7 +22,7 @@ The Zen of Python, by Tim Peters
 18	Lytvynenko Artem
 19	Mariia Anokhina
 20	Nataliia Maslii
-21	Pavlo Lutsyk
+21 Explicit is better than implicit.
 22	Shmyhol Evhenii
 23	Taras Rykhlinskyi
 24	Tsoi Maksym

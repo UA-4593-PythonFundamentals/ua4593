@@ -23,7 +23,7 @@ The Zen of Python, by Tim Peters
 19	Mariia Anokhina
 20	Nataliia Maslii
 21	Pavlo Lutsyk
-22	Shmyhol Evhenii
+22 Simple is better than complex.
 23	Taras Rykhlinskyi
 24	Tsoi Maksym
 25	Vadym Polyniak

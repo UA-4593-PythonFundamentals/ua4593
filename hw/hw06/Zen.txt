@@ -9,7 +9,7 @@ The Zen of Python, by Tim Peters
 5.Flat is better than nested.
 6.Sparce is better than dense.
 7.Readability counts.
-8	Vadym Bobryshev
+8.Special cases aren't special enough to break the rules.
 9	Vasyl Rusanov
 10	Errors should never pass silently.
 11	Мария
@@ -22,8 +22,8 @@ The Zen of Python, by Tim Peters
 18	Lytvynenko Artem
 19	Mariia Anokhina
 20	Nataliia Maslii
-21	Pavlo Lutsyk
-22	Shmyhol Evhenii
+21 Explicit is better than implicit.
+22 Simple is better than complex.
 23	Flat is better than nested
 24	Tsoi Maksym
 25	Vadym Polyniak

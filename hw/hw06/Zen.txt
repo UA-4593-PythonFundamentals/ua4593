@@ -5,7 +5,7 @@ The Zen of Python, by Tim Peters
 1. Artem Lytvynenko
 2	Arthur Andronaki
 3.Simple is better than complex.
-4	Mykhailo Kovalenko
+4. Complex is better than complicated.
 5.Flat is better than nested.
 6.Sparce is better than dense.
 7.Readability counts.
@@ -25,6 +25,9 @@ The Zen of Python, by Tim Peters
 21	Pavlo Lutsyk
 22 Simple is better than complex.
 23	Taras Rykhlinskyi
+21 Explicit is better than implicit.
+22	Shmyhol Evhenii
+23	Flat is better than nested
 24	Tsoi Maksym
 25	Vadym Polyniak
 26	Readability counts.

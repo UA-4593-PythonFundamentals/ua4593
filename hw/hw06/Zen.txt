@@ -22,11 +22,8 @@ The Zen of Python, by Tim Peters
 18	Lytvynenko Artem
 19	Mariia Anokhina
 20	Nataliia Maslii
-21	Pavlo Lutsyk
-22 Simple is better than complex.
-23	Taras Rykhlinskyi
 21 Explicit is better than implicit.
-22	Shmyhol Evhenii
+22 Simple is better than complex.
 23	Flat is better than nested
 24	Tsoi Maksym
 25	Vadym Polyniak

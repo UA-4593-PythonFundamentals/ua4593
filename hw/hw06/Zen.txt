@@ -20,7 +20,7 @@ The Zen of Python, by Tim Peters
 16	Explicit is better than implicit.
 17	Danil Pronarovich
 18	Lytvynenko Artem
-19	Mariia Anokhina
+19. Namespaces are one honking great idea -- let's do more of those!
 20	Nataliia Maslii
 21 Explicit is better than implicit.
 22 Simple is better than complex.

@@ -1,5 +1,6 @@
 
 def areas():
+    """This function returns three functions to calculate the area of a rectangle, triangle, and circle."""
     def rectangle(width, longht):
         area_rectangle = width * longht
         return(area_rectangle)

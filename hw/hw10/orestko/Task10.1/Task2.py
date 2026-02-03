@@ -6,7 +6,7 @@ class Human:
     def greet(self):
         return f"Hello, my name is {self.name}!"
 
-    
+    @classmethod
     def species_info(cls):
         return "This species is Homosapiens"
 

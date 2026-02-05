@@ -1,6 +1,6 @@
+
 import pygame
 import random
-
 pygame.init()
 screen_height = 720
 screen_width =  1280
@@ -16,11 +16,14 @@ instruction_text = "Guess a number between 1 and 100. Use a keyboard to write th
 rand_number = random.randint(1, 100)
 line_color = (255,255,255)
 game_state = False
+attempt = 10
 
-
+print(rand_number)
 while running:
+    attempt_surface = small_font.render(f"Attempts: {attempt}", True, (255,255,255))
     input_surface = large_font.render(text, True, (255,255,255))
     instruction_surface = small_font.render(instruction_text, True, (255,255,255))
+    attempt_rect = attempt_surface.get_rect(topright=screen.get_rect().topright)
     input_rect = input_surface.get_rect(center=screen.get_rect().center)
     instruction_rect = instruction_surface.get_rect(center=(center_x, center_y + 100))
     for event in pygame.event.get():
@@ -38,22 +41,27 @@ while running:
                         line_color = (255,165,0)
                         instruction_text = "Warm! You are close"
                         text = ""
+                        attempt = attempt - 1
                     elif 6 <= abs(rand_number - guess) <= 25:
                         line_color = (0, 0, 255)
                         instruction_text = "Cold!"
                         text = ""
+                        attempt = attempt - 1
                     elif 26 <= abs(rand_number - guess) <= 99:
                         line_color = "aqua"
                         instruction_text = "Very cold!"
                         text = "" 
+                        attempt = attempt - 1
                     else:
                         text = ""
                 except ValueError:
                     instruction_text = "That's not a number"
             elif event.key == pygame.K_BACKSPACE:
-               text = text[:-1]
-            else: 
-                text += event.unicode
+               if not game_state and attempt > 0:
+                text = text[:-1]
+            else:
+                if not game_state and attempt > 0:
+                    text += event.unicode
             if game_state:
                 instruction_text = "It's correct! Press R to restart the game"
                 if event.key == pygame.K_r:
@@ -62,13 +70,22 @@ while running:
                     line_color = (255,255,255)
                     text = ""
                     game_state = False
-                    
+            if attempt == 0:
+                instruction_text = "You are out of your attempts. Press R to restart"
+                if event.key == pygame.K_r:
+                    instruction_text = "Hey! Guess a number from 1 to 100"
+                    rand_number = random.randint(1, 100)
+                    line_color = (255,255,255)
+                    text = ""
+                    game_state = False
+                    attempt = 10
     screen.fill((30, 30, 30))
+    screen.blit(attempt_surface, attempt_rect)
     screen.blit(input_surface, input_rect)
     screen.blit(instruction_surface, instruction_rect)
     pygame.draw.line(screen, line_color, (1, input_rect.bottom + 10), (1280, input_rect.bottom + 10), 2)
     pygame.display.flip()
 
-    clock.tick(25)  # limits FPS to 60
+    clock.tick(25)  
 
 pygame.quit()

@@ -9,7 +9,7 @@ COORD_X=50
 COORD_Y=50
 WIDTH_RECTANGLE=40
 HEIGHT_RECTANGLE=60
-DELTA_STEP=5
+DELTA_STEP=50
 
 BLACK_COLOR = (0, 0, 0)
 RED_COLOR = (250, 0, 0)
@@ -17,7 +17,7 @@ RED_COLOR = (250, 0, 0)
 pygame.init()
 
 
-gameDisplay = pygame.display.set_mode((WIDTH_DISPLAY, HEIGHT_DISPLAY), pygame.RESIZABLE)
+gameDisplay = pygame.display.set_mode((WIDTH_DISPLAY, HEIGHT_DISPLAY))
 
 pygame.display.set_caption("My first game")
 
@@ -33,7 +33,6 @@ while run:
             run = False
 
     keys = pygame.key.get_pressed()
-    
     if keys[pygame.K_LEFT]:
         COORD_X = COORD_X-DELTA_STEP
     if keys[pygame.K_RIGHT]:
@@ -43,8 +42,18 @@ while run:
     if keys[pygame.K_DOWN]:
         COORD_Y = COORD_Y+DELTA_STEP
 
+    print(f"({COORD_X}, {COORD_Y})")
+    if COORD_X > WIDTH_DISPLAY - WIDTH_RECTANGLE:
+        COORD_X = WIDTH_DISPLAY - WIDTH_RECTANGLE
+    if COORD_X < 0:
+        COORD_X = 0
+    if COORD_Y > HEIGHT_DISPLAY - HEIGHT_RECTANGLE:
+        COORD_Y = HEIGHT_DISPLAY - HEIGHT_RECTANGLE
+    if COORD_Y < 0:
+        COORD_Y = 0
 
     gameDisplay.fill(BLACK_COLOR) 
+
 
     pygame.draw.rect(gameDisplay, RED_COLOR, [COORD_X, 
                                               COORD_Y, 

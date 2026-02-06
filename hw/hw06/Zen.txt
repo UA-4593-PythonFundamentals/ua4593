@@ -22,8 +22,8 @@ The Zen of Python, by Tim Peters
 18	Lytvynenko Artem
 19. Namespaces are one honking great idea -- let's do more of those!
 20	Nataliia Maslii
-21 Explicit is better than implicit.
-22 Simple is better than complex.
+21	Pavlo Lutsyk
+22	Shmyhol Evhenii
 23	Flat is better than nested
 24	Tsoi Maksym
 25	Vadym Polyniak

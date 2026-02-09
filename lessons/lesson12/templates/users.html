@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список користувачів</title>
+    <!-- Підключення Tailwind CSS для швидкої та гарної стилізації -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Додаткові стилі для плавних переходів */
+        .user-row:hover {
+            background-color: rgba(243, 244, 246, 1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Заголовок сторінки -->
+        <div class="mb-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900">Користувачі системи</h1>
+                <p class="mt-2 text-sm text-gray-600">Повний список зареєстрованих користувачів та їхні контактні дані.</p>
+            </div>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                Всього: {{ users.__len__() }} користувачів
+            </span>
+        </div>
+
+        <!-- Контейнер таблиці -->
+        <div class="bg-white shadow-md rounded-xl overflow-hidden border border-gray-200">
+            <div class="overflow-x-auto">
+                <a href="{{ url_for('create_user') }}" 
+                        class="inline-block px-8 py-3 rounded-lg text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-lg shadow-indigo-200 transition duration-200">
+                        Створити профіль
+                    </a>
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                ID (PK)
+                            </th>
+                            <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                Ім'я користувача
+                            </th>
+                            <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                Email
+                            </th>
+                            <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                Вік
+                            </th>
+                            <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                Телефон
+                            </th>
+                            <th scope="col" class="px-6 py-4 text-right text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                Дії
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        {% for user in users %}
+                        <tr class="user-row transition-colors duration-200">
+                            <!-- PK (Primary Key) -->
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-400">
+                                {{ user.pk }}
+                            </td>
+                            
+                            <!-- Username -->
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm font-medium text-gray-900">{{ user.username }}</div>
+                            </td>
+                            
+                            <!-- Email -->
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                                <a href="mailto:{{ user.email }}" class="text-blue-600 hover:underline">
+                                    {{ user.email }}
+                                </a>
+                            </td>
+                            
+                            <!-- Age -->
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 text-center">
+                                {{ user.age }}
+                            </td>
+                            
+                            <!-- Phone -->
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                                {{ user.phone }}
+                            </td>
+
+                            <!-- Actions -->
+                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                <button class="text-indigo-600 hover:text-indigo-900 mr-3">Редагувати</button>
+                                <a href="{{ url_for('delete_user', user_pk=user.pk) }}" class="text-red-600 hover:text-red-900">Видалити</a>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <!-- Стан, якщо список порожній -->
+                        <tr>
+                            <td colspan="6" class="px-6 py-10 text-center text-gray-500">
+                                <div class="flex flex-col items-center">
+                                    <svg class="h-12 w-12 text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    <p>Користувачів поки що немає.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Підвал сторінки -->
+        <p class="mt-6 text-center text-xs text-gray-400 uppercase tracking-widest">
+            Flask User Management System &bull; {{ now }}
+        </p>
+    </div>
+
+</body>
+</html>

@@ -3,4 +3,4 @@ def largest_number(numbers):
     if not numbers:
         return None
     return max(numbers)
-print(largest_number([10, 200])) # Expected output: 200 
+print(largest_number([100, 6000])) # Expected output: 6000 

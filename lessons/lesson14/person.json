@@ -1,0 +1,11 @@
+{
+    "name": "Anna Schmidt",
+    "age": 28,
+    "city": "Berlin",
+    "email": "anna@example.de",
+    "hobbies": [
+        "reading",
+        "hiking",
+        "gaming"
+    ]
+}

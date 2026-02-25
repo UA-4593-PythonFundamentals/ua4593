@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Редагування "{{ post['title'] }}" {% endblock %}</h1>
+
+<!-- Форма редагування -->
+<form method="post">
+    <div class="form-group">
+        <label for="title">Назва</label>
+        <input type="text" name="title" class="form-control"
+               value="{{ request.form['title'] or post['title'] }}">
+    </div>
+
+    <div class="form-group">
+        <label for="content">Опис</label>
+        <textarea name="content" class="form-control">{{ request.form['content'] or post['content'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Зберегти зміни</button>
+    </div>
+</form>
+
+<hr>
+
+<!-- Форма видалення (додається в самому низу) -->
+<form action="{{ url_for('delete', id=post['id']) }}" method="POST">
+    <input type="submit" value="Видалити пост"
+            class="btn btn-danger btn-sm"
+            onclick="return confirm('Ви впевнені, що хочете видалити цю публікацію?')">
+</form>
+
+{% endblock %}

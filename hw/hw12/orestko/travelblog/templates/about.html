@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="jumbotron mt-4 shadow-sm bg-white">
+        <h1 class="display-4">{% block title %} Про TravelBlog 🌍 {% endblock %}</h1>
+        <p class="lead">Це мій перший проект на Flask для ведення нотаток про подорожі.</p>
+        <hr class="my-4">
+        
+        <h3>Що тут можна знайти?</h3>
+        <ul>
+            <li><strong>Нотатки:</strong> Мої особисті враження від нових місць.</li>
+            <li><strong>Поради:</strong> Лайфхаки для мандрівників.</li>
+            <li><strong>Фото:</strong> (скоро будуть!)</li>
+        </ul>
+
+        <div class="alert alert-info mt-4">
+            Всім хороших і незабутніх подорожей.
+        </div>
+        
+        <a class="btn btn-primary btn-lg" href="{{ url_for('index') }}" role="button">До головної</a>
+    </div>
+{% endblock %}
